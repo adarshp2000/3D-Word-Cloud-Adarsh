@@ -85,9 +85,15 @@ export default function App() {
   const [error, setError] = useState("")
 
   const analyze = useCallback(async () => {
-    if (!url) return
-    setLoading(true)
     setError("")
+
+if (!url || !url.startsWith("http")) {
+  setError("Please enter a valid URL.")
+  return
+}
+
+setLoading(true)
+
     try {
       const res = await fetch("http://127.0.0.1:8000/analyze", {
         method: "POST",
