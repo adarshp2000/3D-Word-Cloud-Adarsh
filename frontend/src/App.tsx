@@ -16,7 +16,7 @@ const SAMPLE_URLS = [
 const STRAND_A_COLORS = ["#60a5fa", "#38bdf8", "#a78bfa", "#818cf8"]
 const STRAND_B_COLORS = ["#34d399", "#4ade80", "#f472b6", "#fb923c"]
 
-function DoubleHelixCloud({ words }: { words: Word[] }) {
+function DoubleHelixCloud({ words }: { words: Word[] }) {  
   const maxWeight = words.length > 0 ? words[0].weight : 1
 
   return (
